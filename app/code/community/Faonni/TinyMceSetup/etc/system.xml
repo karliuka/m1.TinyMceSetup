@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Faonni
+ *  
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade module to newer
+ * versions in the future.
+ * 
+ * @package     Faonni_TinyMceSetup
+ * @copyright   Copyright (c) 2015 Karliuka Vitalii(karliuka.vitalii@gmail.com) 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <sections>
+        <cms>
+            <groups>
+                <wysiwyg>
+                    <fields>
+                        <enabled_html5 translate="label">
+                            <label>Enable Compatibility Html5</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled_html5>
+                        <valid_children translate="label comment">
+                            <label>Valid Children</label>
+							<comment>This allows you to specify what elements can be children of other elements.</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends><enabled_html5>1</enabled_html5></depends>
+                        </valid_children>
+                        <extended_valid_elements translate="label comment">
+                            <label>Extended Valid Elements</label>
+							<comment>This option allows you to set a rule for empty elements being valid.</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends><enabled_html5>1</enabled_html5></depends>
+                        </extended_valid_elements>							
+                    </fields>
+                </wysiwyg>
+            </groups>
+        </cms>
+    </sections>
+</config>

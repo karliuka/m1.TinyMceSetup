@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Faonni
+ *  
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade module to newer
+ * versions in the future.
+ * 
+ * @package     Faonni_TinyMceSetup
+ * @copyright   Copyright (c) 2015 Karliuka Vitalii(karliuka.vitalii@gmail.com) 
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+	<modules>
+		<Faonni_TinyMceSetup>
+			<version>0.1.1</version>
+		</Faonni_TinyMceSetup>
+	</modules>
+	<global>
+		<helpers>
+			<faonni_tinymcesetup>
+				<class>Faonni_TinyMceSetup_Helper</class>
+			</faonni_tinymcesetup>
+		</helpers>
+		<models>
+            <faonni_tinymcesetup>
+                <class>Faonni_TinyMceSetup_Model</class>
+            </faonni_tinymcesetup>					
+		</models>			
+	</global>	
+    <adminhtml>
+		<events>
+            <core_block_abstract_to_html_after>
+                <observers>
+                    <faonni_tinymcesetup>
+                        <class>faonni_tinymcesetup/observer</class>
+                        <method>addJs</method>
+                    </faonni_tinymcesetup>
+                </observers>
+            </core_block_abstract_to_html_after>
+        </events>
+		<translate>
+            <modules>
+                <faonni_tinymcesetup>
+                    <files>
+                        <default>Faonni_TinyMceSetup.csv</default>
+                    </files>
+                </faonni_tinymcesetup>
+            </modules>
+        </translate>			
+	</adminhtml>
+    <default>
+        <cms>
+            <wysiwyg>
+                <enabled_html5>1</enabled_html5>
+				<valid_children>+a[h1|h2|h3|h4|h5|h6|p|span|div|img|article|canvas|command|datalist|details|figcaption|figure|section|source]</valid_children>
+				<extended_valid_elements>input[placeholder|accept|alt|checked|disabled|maxlength|name|readonly|size|src|type|value],article[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],aside[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],audio[id|autoplay|controls|loop|preload|src|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],canvas[id|height|width|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],command[id|checked|disabled|icon|label|radiogroup|type|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],datalist[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],details[id|open|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],embed[id|height|src|type|width|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],figcaption[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],figure[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],footer[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],header[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],hgroup[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],keygen[id|autofocus|challenge|disabled|form|keytype|name|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],mark[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],meter[id|form|high|low|max|min|optimum|value|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],nav[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],output[id|for|form|name|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],progress[id|max|value|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],rp[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],rt[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],ruby[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],section[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],source[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],summary[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],time[id|datetime|pubdate|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],video[id|audio|autoplay|controls|height|loop|poster|preload|src|width|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title],wbr[id|accesskey|class|contenteditable|contextmenu|dir|draggable|dropzone|hidden|spellcheck|style|tabindex|title]</extended_valid_elements>
+            </wysiwyg>
+        </cms>
+    </default>	
+</config>
